@@ -41,6 +41,10 @@
                     [self sortByBubble];
                     break;
                 }
+                case 1:{
+                    //排序里面的二叉排序树
+                    [SortAlgorithmDetail binarySortTree];
+                }
                 default:break;
             }
             break;

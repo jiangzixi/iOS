@@ -18,6 +18,7 @@
 		CC87669232D8CDC4A1E7C06D /* SortingTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8763F501B3D3E970F046E3 /* SortingTypeVC.m */; };
 		CC8768516A315C5FB79DCE8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8767A44064F60AD3303539 /* ViewController.m */; };
 		CC8769DD4BD4E1940D530149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC87662ED2FF0EFA24C4D181 /* Main.storyboard */; };
+		CC876AC4BB780A5DD30930A9 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876383987929DD9EA49C3B /* BinaryTree.m */; };
 		CC876B24A73C19C5F8FBFE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC87663617EBF5EB1B2ACE11 /* LaunchScreen.storyboard */; };
 		CC876BF2D5288BA9458606F8 /* SortAlgorithmDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */; };
 		CC876CE946004CF5692C0BD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8765D09D6597E80440B3DD /* AppDelegate.m */; };
@@ -45,6 +46,7 @@
 		CC876245CFE1E5D9FF586B52 /* sortingAlgorithmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sortingAlgorithmTests.m; sourceTree = "<group>"; };
 		CC87628254C9993B2615822D /* sortingAlgorithmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sortingAlgorithmUITests.m; sourceTree = "<group>"; };
 		CC87636564AD0BA8D1F0A5E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC876383987929DD9EA49C3B /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		CC8763F501B3D3E970F046E3 /* SortingTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingTypeVC.m; sourceTree = "<group>"; };
 		CC876595D147D85F61E3689B /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		CC87659B236A6409E0DE4AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithmDetail.m; sourceTree = "<group>"; };
 		CC876B1208F292C250621A50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC876B2F41C9A6A39B0029EB /* SortAlgorithmDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortAlgorithmDetail.h; sourceTree = "<group>"; };
+		CC876B7D9FEB8CDA0F425CD1 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		CC876C947EC19FAA06551404 /* SortingTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingTypeVC.h; sourceTree = "<group>"; };
 		CC876CA40E6BE45701D114A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC876D15952BBFEB2F60CD8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				CC876595D147D85F61E3689B /* Macro.h */,
 				CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */,
 				CC876B2F41C9A6A39B0029EB /* SortAlgorithmDetail.h */,
+				CC876383987929DD9EA49C3B /* BinaryTree.m */,
+				CC876B7D9FEB8CDA0F425CD1 /* BinaryTree.h */,
 			);
 			path = sortingAlgorithm;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				CC87669232D8CDC4A1E7C06D /* SortingTypeVC.m in Sources */,
 				CC87624CC5158DB4127DDB47 /* SortingDetailVC.m in Sources */,
 				CC876BF2D5288BA9458606F8 /* SortAlgorithmDetail.m in Sources */,
+				CC876AC4BB780A5DD30930A9 /* BinaryTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

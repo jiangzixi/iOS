@@ -12,4 +12,6 @@
 + (instancetype)shareSortAlgorithm;
 /**冒泡排序*/
 + (NSMutableArray *)sortingByBubble;
+
++ (void)binarySortTree;
 @end

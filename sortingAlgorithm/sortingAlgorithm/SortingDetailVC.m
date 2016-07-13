@@ -41,15 +41,20 @@
                     [self sortByBubble];
                     break;
                 }
-                case 1:{
-                    //排序里面的二叉排序树
-                    [SortAlgorithmDetail binarySortTree];
-                }
                 default:break;
             }
             break;
         }
-        case 1:{
+        case 1: {
+            switch (_algorithmType){
+                case 0:{
+                    //排序里面的二叉排序树
+                    [SortAlgorithmDetail binarySortTree];
+                    break;
+                }
+                default:
+                    break;
+            }
             break;
         }
         case 2:{

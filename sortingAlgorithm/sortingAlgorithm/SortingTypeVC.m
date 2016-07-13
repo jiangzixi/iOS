@@ -22,10 +22,11 @@
     switch (_type) {
         case 0:{
             //排序
-            _nameArr = @[@"冒泡排序",@"二叉排序树",@"快速排序"];
+            _nameArr = @[@"冒泡排序",@"快速排序"];
             break;
         }
         case 1:{
+            _nameArr = @[@"二叉排序树"];
             break;
         }
         case 2:{
@@ -53,7 +54,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return _nameArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

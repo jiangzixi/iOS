@@ -48,7 +48,7 @@
 }
 
 + (void)binarySortTree {
-    int a[] = {42, 18, 54, 13, 14, 76, 33, 43};
+    int a[] = {42, 18, 54, 13, 14, 22, 81, 35, 76, 33, 43};
     int len = sizeof(a) / sizeof(a[0]);
     BinaryTree *root = [[BinaryTree alloc] init];
     root.presentNum = a[0];
@@ -78,7 +78,7 @@
             last.left = a[i];
         }
     }
-    NSLog(@"%@",root);
+    NSLog(@"%@", root);
 }
 
 @end

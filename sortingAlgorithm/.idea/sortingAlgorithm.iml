@@ -13,12 +13,12 @@
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortingDetailVC.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortAlgorithmDetail.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortAlgorithmDetail.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortingTypeVC.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/Macro.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/BinaryTree.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/ViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/BinaryTree.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/Macro.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortingTypeVC.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/SortAlgorithmDetail.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortingAlgorithm/ViewController.h" isTestSource="false" />

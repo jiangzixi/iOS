@@ -19,7 +19,7 @@
     });
     return detail;
 }
-
+//冒泡排序
 + (NSMutableArray *)sortingByBubble {
     NSMutableArray *resultArr = [NSMutableArray arrayWithCapacity:8];
     int a[] = {12, 42, 54, 13, 34, 76, 33, 43};
@@ -46,7 +46,7 @@
     }
     return resultArr;
 }
-
+//二叉排序树
 + (void)binarySortTree {
     int a[] = {42, 18, 54, 13, 14, 22, 81, 35, 76, 33, 43};
     int len = sizeof(a) / sizeof(a[0]);

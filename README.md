@@ -10,4 +10,8 @@
 ## sortingAlgorithm
 集合多种算法的Demo
 
-##
+##JiangDouDiZhu
+斗地主游戏的研究
+
+##hong
+宏的研究

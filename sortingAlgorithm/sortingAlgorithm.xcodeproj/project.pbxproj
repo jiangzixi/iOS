@@ -10,18 +10,18 @@
 		CC8760B80E17B4168215FF4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC876EDD62493528764DB9D4 /* Info.plist */; };
 		CC8760D225BB21805A1C6B75 /* sortingAlgorithmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876245CFE1E5D9FF586B52 /* sortingAlgorithmTests.m */; };
 		CC876163E82D8BCB60BF3924 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC876E9FAE4AB9FC9431D9D6 /* Info.plist */; };
-		CC87624CC5158DB4127DDB47 /* SortingDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876F9E6F7D0EC26B20436D /* SortingDetailVC.m */; };
 		CC8762B894E33244E11F9B2D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC87659B236A6409E0DE4AE3 /* Info.plist */; };
 		CC8763050E293CC8221B1DEF /* sortingAlgorithmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87628254C9993B2615822D /* sortingAlgorithmUITests.m */; };
 		CC876445F8F882A8CA813A09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876E04C92ADE022EF8D114 /* main.m */; };
 		CC8765C571CE28BA123EBA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC876CA40E6BE45701D114A8 /* Assets.xcassets */; };
-		CC87669232D8CDC4A1E7C06D /* SortingTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8763F501B3D3E970F046E3 /* SortingTypeVC.m */; };
-		CC8768516A315C5FB79DCE8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8767A44064F60AD3303539 /* ViewController.m */; };
+		CC8766B00630A0C9127EAFC1 /* SortingTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8762776B7D3EEF9399C962 /* SortingTypeVC.m */; };
+		CC87673B431F9455BC0619A5 /* SortingDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87600A2DFB5C1ECEB2F426 /* SortingDetailVC.m */; };
 		CC8769DD4BD4E1940D530149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC87662ED2FF0EFA24C4D181 /* Main.storyboard */; };
 		CC876AC4BB780A5DD30930A9 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876383987929DD9EA49C3B /* BinaryTree.m */; };
 		CC876B24A73C19C5F8FBFE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC87663617EBF5EB1B2ACE11 /* LaunchScreen.storyboard */; };
 		CC876BF2D5288BA9458606F8 /* SortAlgorithmDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */; };
 		CC876CE946004CF5692C0BD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8765D09D6597E80440B3DD /* AppDelegate.m */; };
+		CC876D6E075540CAE3DFB8EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876EC7D7BD354AC046B185 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,31 +42,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC8761527EFDE27808BED4BA /* SortingDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingDetailVC.h; sourceTree = "<group>"; };
+		CC87600A2DFB5C1ECEB2F426 /* SortingDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingDetailVC.m; sourceTree = "<group>"; };
 		CC876245CFE1E5D9FF586B52 /* sortingAlgorithmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sortingAlgorithmTests.m; sourceTree = "<group>"; };
+		CC8762776B7D3EEF9399C962 /* SortingTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingTypeVC.m; sourceTree = "<group>"; };
 		CC87628254C9993B2615822D /* sortingAlgorithmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sortingAlgorithmUITests.m; sourceTree = "<group>"; };
+		CC8762AA16FF25B2A1480C99 /* SortingDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingDetailVC.h; sourceTree = "<group>"; };
 		CC87636564AD0BA8D1F0A5E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC876383987929DD9EA49C3B /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
-		CC8763F501B3D3E970F046E3 /* SortingTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingTypeVC.m; sourceTree = "<group>"; };
 		CC876595D147D85F61E3689B /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		CC87659B236A6409E0DE4AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CC8765D09D6597E80440B3DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CC8766A3245C8117FD65F96F /* sortingAlgorithmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sortingAlgorithmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8766F54D766614F94442A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CC876711670382C6D89A3216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC8767A44064F60AD3303539 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithmDetail.m; sourceTree = "<group>"; };
 		CC876B1208F292C250621A50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC876B2F41C9A6A39B0029EB /* SortAlgorithmDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortAlgorithmDetail.h; sourceTree = "<group>"; };
 		CC876B7D9FEB8CDA0F425CD1 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
-		CC876C947EC19FAA06551404 /* SortingTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingTypeVC.h; sourceTree = "<group>"; };
 		CC876CA40E6BE45701D114A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC876D15952BBFEB2F60CD8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC876D3109E8BFBF84CB60E4 /* SortingTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingTypeVC.h; sourceTree = "<group>"; };
 		CC876E04C92ADE022EF8D114 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC876E9FAE4AB9FC9431D9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		CC876EC7D7BD354AC046B185 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC876EDD62493528764DB9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CC876F271857849949F92356 /* sortingAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sortingAlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC876F381E1F220B29F550FD /* sortingAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sortingAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC876F9E6F7D0EC26B20436D /* SortingDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,17 +114,12 @@
 				CC876B1208F292C250621A50 /* AppDelegate.h */,
 				CC8765D09D6597E80440B3DD /* AppDelegate.m */,
 				CC87662ED2FF0EFA24C4D181 /* Main.storyboard */,
-				CC876D15952BBFEB2F60CD8D /* ViewController.h */,
-				CC8767A44064F60AD3303539 /* ViewController.m */,
-				CC8763F501B3D3E970F046E3 /* SortingTypeVC.m */,
-				CC876C947EC19FAA06551404 /* SortingTypeVC.h */,
-				CC876F9E6F7D0EC26B20436D /* SortingDetailVC.m */,
-				CC8761527EFDE27808BED4BA /* SortingDetailVC.h */,
 				CC876595D147D85F61E3689B /* Macro.h */,
 				CC876A578C4EF8655667BA9F /* SortAlgorithmDetail.m */,
 				CC876B2F41C9A6A39B0029EB /* SortAlgorithmDetail.h */,
 				CC876383987929DD9EA49C3B /* BinaryTree.m */,
 				CC876B7D9FEB8CDA0F425CD1 /* BinaryTree.h */,
+				CC876B4ECF8E8C7DB1F13B93 /* Controller */,
 			);
 			path = sortingAlgorithm;
 			sourceTree = "<group>";
@@ -145,6 +140,19 @@
 				CC87628254C9993B2615822D /* sortingAlgorithmUITests.m */,
 			);
 			path = sortingAlgorithmUITests;
+			sourceTree = "<group>";
+		};
+		CC876B4ECF8E8C7DB1F13B93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC8762AA16FF25B2A1480C99 /* SortingDetailVC.h */,
+				CC87600A2DFB5C1ECEB2F426 /* SortingDetailVC.m */,
+				CC876D3109E8BFBF84CB60E4 /* SortingTypeVC.h */,
+				CC8762776B7D3EEF9399C962 /* SortingTypeVC.m */,
+				CC8766F54D766614F94442A9 /* ViewController.h */,
+				CC876EC7D7BD354AC046B185 /* ViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CC876E8677B9B37C76805CD6 = {
@@ -293,11 +301,11 @@
 			files = (
 				CC876445F8F882A8CA813A09 /* main.m in Sources */,
 				CC876CE946004CF5692C0BD2 /* AppDelegate.m in Sources */,
-				CC8768516A315C5FB79DCE8B /* ViewController.m in Sources */,
-				CC87669232D8CDC4A1E7C06D /* SortingTypeVC.m in Sources */,
-				CC87624CC5158DB4127DDB47 /* SortingDetailVC.m in Sources */,
 				CC876BF2D5288BA9458606F8 /* SortAlgorithmDetail.m in Sources */,
 				CC876AC4BB780A5DD30930A9 /* BinaryTree.m in Sources */,
+				CC87673B431F9455BC0619A5 /* SortingDetailVC.m in Sources */,
+				CC8766B00630A0C9127EAFC1 /* SortingTypeVC.m in Sources */,
+				CC876D6E075540CAE3DFB8EA /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

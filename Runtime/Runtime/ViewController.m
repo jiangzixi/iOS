@@ -8,19 +8,17 @@
 
 
 #import "ViewController.h"
-<<<<<<< Updated upstream
 #import "NewRecevierObject.h"
 #import "AppDelegate.h"
 #import <objc/runtime.h>
+#import <sys/sysctl.h>
+#import <mach/mach.h>
 
 //动态添加的方法的实现
 void dynamicAddMyMethod(id self,SEL _cmd){
     NSLog(@"addMyMethodSuccess!");
 }
-=======
-#import <sys/sysctl.h>
-#import <mach/mach.h>
->>>>>>> Stashed changes
+
 
 
 @interface ViewController ()
@@ -36,7 +34,6 @@ void dynamicAddMyMethod(id self,SEL _cmd){
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-<<<<<<< Updated upstream
     //发送者和接受者流程图片
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"respondsToSelector.png"]];
     imageView.frame = [UIScreen mainScreen].bounds;
@@ -61,15 +58,12 @@ void dynamicAddMyMethod(id self,SEL _cmd){
     //将消息接受者进行偷梁换柱
     [self performSelector:@selector(changeReceiver)];
 
-=======
-
     vm_statistics_data_t vmStats;
     mach_msg_type_number_t infoCount = HOST_VM_INFO64_COUNT;
 
 
 
     // Do any additional setup after loading the view, typically from a nib.
->>>>>>> Stashed changes
 }
 
 //如果没找到selector之后先走这个方法,这个方法是NSObject的方法
@@ -129,10 +123,3 @@ void dynamicAddMyMethod(id self,SEL _cmd){
     // Dispose of any resources that can be recreated.
 }
 @end
-
-<<<<<<< Updated upstream
-=======
-
-
-@end
->>>>>>> Stashed changes

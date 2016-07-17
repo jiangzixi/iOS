@@ -4,18 +4,18 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/RuntimeUITests/RuntimeUITests.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/RuntimeUITests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Runtime/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/AppDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Runtime/NewRecevierObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/respondsToSelector.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Runtime/NewRecevierObject.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Runtime/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Runtime/NewRecevierObject.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Runtime/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Runtime/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/ViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Runtime/Base.lproj/Main.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Runtime/NewRecevierObject.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/RuntimeTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/RuntimeTests/RuntimeTests.m" isTestSource="false" />
     </content>

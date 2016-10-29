@@ -6,24 +6,30 @@
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemoUITests/ChattingDemoUITests.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/ChattingDemoTests.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/PrefixHeader.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/main.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ToolBarView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Assets.xcassets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/UIView+ZXLayout.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ChatVC.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/UIView+ZXLayout.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ViewController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ChatVC.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ToolBarView.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/voice@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/add@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/UIView+ZXLayout.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/PrefixHeader.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/NSObject+Ext.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/UIView+ZXLayout.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/NSObject+Ext.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/Main.storyboard" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

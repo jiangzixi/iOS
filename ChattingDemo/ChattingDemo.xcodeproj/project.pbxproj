@@ -15,11 +15,14 @@
 		6E94C1331DC496030037740C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E94C1311DC496030037740C /* LaunchScreen.storyboard */; };
 		6E94C13E1DC496030037740C /* ChattingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94C13D1DC496030037740C /* ChattingDemoTests.m */; };
 		6E94C1491DC496030037740C /* ChattingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94C1481DC496030037740C /* ChattingDemoUITests.m */; };
+		CC8760879B8D0B450E32E8EB /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87674CFD0D2ABDF7CD609C /* NSObject+Ext.m */; };
+		CC87608F7FF58474CC639DCD /* ToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876BA131E9156DC35E509F /* ToolBarView.m */; };
 		CC8761C7912D8D0361638611 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8761A85DF57505EF811074 /* voice@2x.png */; };
-		CC87641EEA750A044586021F /* ToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876686D72A6A3FF79C3D34 /* ToolBarView.m */; };
-		CC87643C56DFCE25CF3FDFC6 /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87692F8F2BF0E37CBE4E2E /* ChatVC.m */; };
-		CC8764B823C069AD54E1B019 /* UIView+ZXLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8764E5EB8F64A51AA65294 /* UIView+ZXLayout.m */; };
+		CC8769983B77C5939C32DFC7 /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876BFC1140963EB8E58C10 /* ChatVC.m */; };
 		CC876B9F836504D4176AC3EF /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8761ED26C65E835AB384D9 /* add@2x.png */; };
+		CC876BAB6ED5549857E1C3DA /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876917F91478A544E6706D /* ChatTextCell.m */; };
+		CC876DF75C3DEF6E5BDD3776 /* ChatMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8761E98DDD0199A750155F /* ChatMsgModel.m */; };
+		CC876EA5CE348632FD88630C /* UIView+ZXLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87605FE79CBEC5521E0168 /* UIView+ZXLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,15 +59,21 @@
 		6E94C1441DC496030037740C /* ChattingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChattingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E94C1481DC496030037740C /* ChattingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChattingDemoUITests.m; sourceTree = "<group>"; };
 		6E94C14A1DC496030037740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EEBBD341DC49A3000087FB5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CC87605FE79CBEC5521E0168 /* UIView+ZXLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZXLayout.m"; sourceTree = "<group>"; };
 		CC8761A85DF57505EF811074 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
+		CC8761E98DDD0199A750155F /* ChatMsgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMsgModel.m; sourceTree = "<group>"; };
 		CC8761ED26C65E835AB384D9 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
-		CC87621C43B6A748B66801FB /* ToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBarView.h; sourceTree = "<group>"; };
-		CC8764E5EB8F64A51AA65294 /* UIView+ZXLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZXLayout.m"; sourceTree = "<group>"; };
-		CC87656C3EC6E771C510096A /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
-		CC876686D72A6A3FF79C3D34 /* ToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBarView.m; sourceTree = "<group>"; };
-		CC87679EEEAEFC2FE2FBA7AA /* UIView+ZXLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZXLayout.h"; sourceTree = "<group>"; };
-		CC87692F8F2BF0E37CBE4E2E /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
+		CC8765C5ED71156924C3174D /* UIView+ZXLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZXLayout.h"; sourceTree = "<group>"; };
+		CC876699904EA47426F4A091 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CC87674CFD0D2ABDF7CD609C /* NSObject+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
+		CC87689E5DA141B8DE0E7230 /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
+		CC876917F91478A544E6706D /* ChatTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextCell.m; sourceTree = "<group>"; };
+		CC87699777F02968B3E40C02 /* NSObject+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ext.h"; sourceTree = "<group>"; };
+		CC876A43C635A2AE9309DD21 /* ToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBarView.h; sourceTree = "<group>"; };
+		CC876BA131E9156DC35E509F /* ToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBarView.m; sourceTree = "<group>"; };
+		CC876BFC1140963EB8E58C10 /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
+		CC876C1DED6B49CE2BC42DE4 /* ChatMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMsgModel.h; sourceTree = "<group>"; };
+		CC876D17B129723A5F9D2088 /* ChatTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +124,6 @@
 		6E94C1221DC496030037740C /* ChattingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6EEBBD341DC49A3000087FB5 /* PrefixHeader.pch */,
 				6E94C1261DC496030037740C /* AppDelegate.h */,
 				6E94C1271DC496030037740C /* AppDelegate.m */,
 				6E94C1291DC496030037740C /* ViewController.h */,
@@ -125,13 +133,9 @@
 				6E94C1311DC496030037740C /* LaunchScreen.storyboard */,
 				6E94C1341DC496030037740C /* Info.plist */,
 				6E94C1231DC496030037740C /* Supporting Files */,
-				CC87679EEEAEFC2FE2FBA7AA /* UIView+ZXLayout.h */,
-				CC8764E5EB8F64A51AA65294 /* UIView+ZXLayout.m */,
-				CC87692F8F2BF0E37CBE4E2E /* ChatVC.m */,
-				CC87656C3EC6E771C510096A /* ChatVC.h */,
-				CC876686D72A6A3FF79C3D34 /* ToolBarView.m */,
-				CC87621C43B6A748B66801FB /* ToolBarView.h */,
 				CC87603E86E5892F0F9EC352 /* Resource */,
+				CC87600DCEAFAF201E86E093 /* Chat */,
+				CC8762CA3FB2B3D4F8C158E1 /* Ext */,
 			);
 			path = ChattingDemo;
 			sourceTree = "<group>";
@@ -162,6 +166,18 @@
 			path = ChattingDemoUITests;
 			sourceTree = "<group>";
 		};
+		CC87600DCEAFAF201E86E093 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CC8765CE02ED535C974E35D6 /* Msg */,
+				CC8765BAE209603D78B1BEF8 /* ToolBar */,
+				CC87689E5DA141B8DE0E7230 /* ChatVC.h */,
+				CC876BFC1140963EB8E58C10 /* ChatVC.m */,
+				CC876C4C4CDB75DF0C193BF2 /* Cell */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		CC87603E86E5892F0F9EC352 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +185,45 @@
 				CC8761ED26C65E835AB384D9 /* add@2x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		CC8762CA3FB2B3D4F8C158E1 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				CC87699777F02968B3E40C02 /* NSObject+Ext.h */,
+				CC87674CFD0D2ABDF7CD609C /* NSObject+Ext.m */,
+				CC876699904EA47426F4A091 /* PrefixHeader.pch */,
+				CC8765C5ED71156924C3174D /* UIView+ZXLayout.h */,
+				CC87605FE79CBEC5521E0168 /* UIView+ZXLayout.m */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		CC8765BAE209603D78B1BEF8 /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC876A43C635A2AE9309DD21 /* ToolBarView.h */,
+				CC876BA131E9156DC35E509F /* ToolBarView.m */,
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
+		CC8765CE02ED535C974E35D6 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+				CC876C1DED6B49CE2BC42DE4 /* ChatMsgModel.h */,
+				CC8761E98DDD0199A750155F /* ChatMsgModel.m */,
+			);
+			path = Msg;
+			sourceTree = "<group>";
+		};
+		CC876C4C4CDB75DF0C193BF2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC876D17B129723A5F9D2088 /* ChatTextCell.h */,
+				CC876917F91478A544E6706D /* ChatTextCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +364,12 @@
 				6E94C12B1DC496030037740C /* ViewController.m in Sources */,
 				6E94C1281DC496030037740C /* AppDelegate.m in Sources */,
 				6E94C1251DC496030037740C /* main.m in Sources */,
-				CC8764B823C069AD54E1B019 /* UIView+ZXLayout.m in Sources */,
-				CC87643C56DFCE25CF3FDFC6 /* ChatVC.m in Sources */,
-				CC87641EEA750A044586021F /* ToolBarView.m in Sources */,
+				CC876DF75C3DEF6E5BDD3776 /* ChatMsgModel.m in Sources */,
+				CC87608F7FF58474CC639DCD /* ToolBarView.m in Sources */,
+				CC8769983B77C5939C32DFC7 /* ChatVC.m in Sources */,
+				CC8760879B8D0B450E32E8EB /* NSObject+Ext.m in Sources */,
+				CC876EA5CE348632FD88630C /* UIView+ZXLayout.m in Sources */,
+				CC876BAB6ED5549857E1C3DA /* ChatTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ChattingDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = ChattingDemo/Ext/PrefixHeader.pch;
 				INFOPLIST_FILE = ChattingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiang.ChattingDemo;
@@ -472,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ChattingDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = ChattingDemo/Ext/PrefixHeader.pch;
 				INFOPLIST_FILE = ChattingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiang.ChattingDemo;

@@ -1,0 +1,18 @@
+//
+// Created by 姜梓烯 on 2016/10/29.
+// Copyright (c) 2016 姜梓烯. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+
+@interface ChatMsgModel : NSObject
+
+@property(nonatomic, strong) NSString *msgId;
+@property(nonatomic, strong) NSString *fromId;
+@property(nonatomic, strong) NSString *toId;
+@property(nonatomic, strong) NSString *time;
+@property(nonatomic, strong) NSString *msgType;
+@property(nonatomic, strong) NSString *msgContent;
+
+@end

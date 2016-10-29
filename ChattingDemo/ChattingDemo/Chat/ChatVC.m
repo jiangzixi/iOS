@@ -23,6 +23,7 @@
     _table = [[UITableView alloc] initWithFrame:CGRectMake(0,0,PHONEWIDTH,PHONEHEIGHT-50) style:UITableViewStylePlain];
     _table.delegate = self;
     _table.dataSource = self;
+    _table.backgroundColor = RGBA(235,235,235,1);
     _table.tableFooterView = [UIView new];
     [self.view addSubview:_table];
 

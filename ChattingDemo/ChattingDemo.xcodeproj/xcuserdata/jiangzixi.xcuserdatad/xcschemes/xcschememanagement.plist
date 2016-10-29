@@ -2,19 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ChattingDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CC876527CCCD18EC81691385</key>
+		<key>6E94C11F1DC496030037740C</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>CC876AF41000357E3C583117</key>
+		<key>6E94C1381DC496030037740C</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>CC876E97628B532AE3F67B48</key>
+		<key>6E94C1431DC496030037740C</key>
 		<dict>
 			<key>primary</key>
 			<true />

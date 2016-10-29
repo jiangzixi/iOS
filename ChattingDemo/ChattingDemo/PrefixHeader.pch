@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  ChattingDemo
+//
+//  Created by 姜梓烯 on 2016/10/29.
+//  Copyright © 2016年 姜梓烯. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "UIView+ZXLayout.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+//常用宏
+#define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define PHONEWIDTH [UIScreen mainScreen].bounds.size.width
+#define PHONEHEIGHT [UIScreen mainScreen].bounds.size.height
+#define PUSH(vc) [self.navigationController pushViewController:vc animated:YES];
+#define POP [self.navigationController popViewControllerAnimated:YES];
+#define iPhone6Width(width) (float)(width)/375*PHONEWIDTH
+#define iPhone5Width(width) (float)(width)/320*PHONEWIDTH
+#define KEYWINDOW [UIApplication sharedApplication].keyWindow
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+CG_INLINE CGRect CGRectMakeByIPhone6(CGFloat x, CGFloat y, CGFloat width, CGFloat height) {
+    CGRect rect;
+    rect.origin.x = x/375*PHONEWIDTH;
+    rect.origin.y = y/667*PHONEHEIGHT;
+    rect.size.width = width/375*PHONEWIDTH;
+    rect.size.height = height/667*PHONEHEIGHT;
+    return rect;
+}
+
+
+
+#endif /* PrefixHeader_pch */

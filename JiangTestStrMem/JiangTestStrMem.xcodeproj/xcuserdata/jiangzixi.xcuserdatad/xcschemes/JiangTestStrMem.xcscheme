@@ -7,10 +7,10 @@
             buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC8764C27F53733FCA7AE05B"
-               BuildableName = "Runtime"
-               BlueprintName = "Runtime"
-               ReferencedContainer = "container:Runtime.xcodeproj">
+               BlueprintIdentifier = "CC876902F0FFF832A16BF7AA"
+               BuildableName = "JiangTestStrMem.app"
+               BlueprintName = "JiangTestStrMem"
+               ReferencedContainer = "container:JiangTestStrMem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -21,10 +21,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC8764C27F53733FCA7AE05B"
-            BuildableName = "Runtime"
-            BlueprintName = "Runtime"
-            ReferencedContainer = "container:Runtime.xcodeproj">
+            BlueprintIdentifier = "CC876902F0FFF832A16BF7AA"
+            BuildableName = "JiangTestStrMem.app"
+            BlueprintName = "JiangTestStrMem"
+            ReferencedContainer = "container:JiangTestStrMem.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>

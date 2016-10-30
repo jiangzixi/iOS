@@ -44,6 +44,7 @@
     _inputView.font = [UIFont systemFontOfSize:16];
     _inputView.textColor = [UIColor blackColor];
     _inputView.delegate = self;
+    _inputView.returnKeyType = UIReturnKeySend;
     _inputView.layer.cornerRadius = 5;
     _inputView.layer.borderColor = topLine.backgroundColor.CGColor;
     _inputView.layer.borderWidth = 1;
@@ -65,7 +66,9 @@
     [super setFrame:frame];
     _voiceBtn.y = frame.size.height - 30 - 11;
     _addBtn.y = frame.size.height - 30 - 11;
-    [[NSNotificationCenter defaultCenter] postNotificationName:kToolBarViewChangeHeighNotification object:nil];
+    if ([_delegate respondsToSelector:@selector(toolBarDidChangeFrame:)]) {
+        [_delegate toolBarDidChangeFrame:frame];
+    }
 }
 
 
@@ -103,13 +106,21 @@
 
 #pragma mark - textviewdelegate
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]){
+        if ([_delegate respondsToSelector:@selector(addATextMsg:)]) {
+            [_delegate addATextMsg:textView.text];
+            textView.text = @"";
+        }
+        return NO;
+    }
+    return YES;
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
     //处理输入框变化
-    CGSize maxSize = CGSizeMake(textView.width, CGFLOAT_MAX);
-    NSDictionary *attribute = @{NSFontAttributeName: textView.font};
     CGSize retSize = [textView sizeThatFits:CGSizeMake(textView.width,100)];
     NSLog(@"%f-----%f",retSize.height,retSize.width);
-//    CGSize retSize = [textView.text boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     if (textView.height != retSize.height || textView.height == 36 || textView.height == 100) {
         [UIView animateWithDuration:0.25 animations:^{
             CGFloat oldHeigh = self.height;

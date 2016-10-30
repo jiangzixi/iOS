@@ -5,14 +5,23 @@
 
 #import <Foundation/Foundation.h>
 
-//UIKIT_EXTERN NSNotificationName const kToolBarViewChangeHeighNotification;
+
 static const CGFloat moreViewHeigh = 224;
-static const NSString *kToolBarViewChangeHeighNotification = @"kToolBarViewChangeHeighNotification";
+
+@protocol ToolBarViewDelegate <NSObject>
+
+@optional
+- (void)addATextMsg:(NSString *)string;
+
+
+- (void)toolBarDidChangeFrame:(CGRect)frame;
+
+@end
 
 @interface ToolBarView : UIView
 
 @property(nonatomic, strong) UITextView *inputView;
-
+@property(nonatomic, weak) id<ToolBarViewDelegate>delegate;
 
 - (void)resetFrame;
 @end

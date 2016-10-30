@@ -53,7 +53,7 @@
         _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
     }
 
-    _cellHeight = _avatarFrame.origin.y+_avatarFrame.size.height+10;
+    _cellHeight = _msgImgFrame.origin.y+_msgImgFrame.size.height-5;
 }
 
 

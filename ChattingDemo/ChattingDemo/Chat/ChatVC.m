@@ -9,7 +9,7 @@
 #import "ChatMsgModel.h"
 #import "ChatCellFrameModel.h"
 
-@interface ChatVC() <UITableViewDelegate, UITableViewDataSource>
+@interface ChatVC () <UITableViewDelegate, UITableViewDataSource, ToolBarViewDelegate>
 
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) ToolBarView *toolBarView;
@@ -22,20 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeTable) name:kToolBarViewChangeHeighNotification object:nil];
 
     [self initChatData];
 
-    _table = [[UITableView alloc] initWithFrame:CGRectMake(0,0,PHONEWIDTH,PHONEHEIGHT-50) style:UITableViewStylePlain];
+    _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, PHONEWIDTH, PHONEHEIGHT - 50) style:UITableViewStylePlain];
     _table.delegate = self;
     _table.dataSource = self;
-    _table.backgroundColor = RGBA(235,235,235,1);
+    _table.alwaysBounceVertical = YES;
+    _table.backgroundColor = RGBA(235, 235, 235, 1);
     _table.tableFooterView = [UIView new];
     _table.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_table registerClass:[ChatTextCell class] forCellReuseIdentifier:@"textCell"];
     [self.view addSubview:_table];
 
-    _toolBarView = [[ToolBarView alloc] initWithFrame:CGRectMake(0,PHONEHEIGHT-50,PHONEWIDTH,50)];
+    _toolBarView = [[ToolBarView alloc] initWithFrame:CGRectMake(0, PHONEHEIGHT - 50, PHONEWIDTH, 50)];
+    _toolBarView.delegate = self;
     [self.view addSubview:_toolBarView];
 
 
@@ -109,23 +110,20 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    [_toolBarView resetFrame];
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [_toolBarView resetFrame];
 }
 
 
-- (void)dealloc{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)changeTable{
-    if (_toolBarView.y!=0) {
-        _table.height = _toolBarView.y;
-    }
-}
-
 - (BOOL)compareTimeDate:(NSString *)str date2:(NSString *)str2 {
-    NSString *datestring = [NSDate dateWithTimeInterval:str.floatValue  format:@"YYYY/MM/dd HH:mm:ss"];
-    NSString *datestring2 = [NSDate dateWithTimeInterval:str2.floatValue  format:@"YYYY/MM/dd HH:mm:ss"];
+    NSString *datestring = [NSDate dateWithTimeInterval:str.floatValue format:@"YYYY/MM/dd HH:mm:ss"];
+    NSString *datestring2 = [NSDate dateWithTimeInterval:str2.floatValue format:@"YYYY/MM/dd HH:mm:ss"];
     NSDateFormatter *dm = [[NSDateFormatter alloc] init];
     [dm setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
     NSDate *newdate = [dm dateFromString:datestring];
@@ -147,17 +145,42 @@
     long dd = [datenow timeIntervalSince1970] - str.longLongValue;
     NSString *timeString = @"";
     if (dd / 86400 > 1) {
-        timeString = [NSDate dateWithTimeInterval:str.floatValue  format:@"yyyy/MM/dd HH:mm"];
+        timeString = [NSDate dateWithTimeInterval:str.floatValue format:@"yyyy/MM/dd HH:mm"];
     } else {
-        timeString = [NSDate dateWithTimeInterval:str.floatValue  format:@"HH:mm"];
+        timeString = [NSDate dateWithTimeInterval:str.floatValue format:@"HH:mm"];
     }
     return timeString;
 }
 
-- (void)scrollToBottomWithAnimation:(BOOL)animation
-{
-    CGFloat offsetY = _table.contentSize.height > _table.height ? _table.contentSize.height - _table.height : -(64);
-    [_table setContentOffset:CGPointMake(0, offsetY) animated:animation];
+- (void)scrollToBottomWithAnimation:(BOOL)animation {
+    if (_table.contentSize.height>_table.height-64) {
+        [_table setContentOffset:CGPointMake(0,_table.contentSize.height-_table.height) animated:YES];
+    }
+}
+
+- (void)toolBarDidChangeFrame:(CGRect)frame {
+    if (_toolBarView.y != 0) {
+        _table.height = _toolBarView.y;
+        [self scrollToBottomWithAnimation:YES];
+    }
+}
+
+- (void)addATextMsg:(NSString *)string {
+    ChatMsgModel *msg = [[ChatMsgModel alloc] init];
+    msg.fromId = kMYCHATID;
+    msg.time = [NSString stringWithFormat:@"%.0f", [[NSDate date] timeIntervalSince1970]];
+    msg.toId = kOTHERCHATID;
+    msg.msgType = @"0";
+    msg.msgContent = string;
+    NSString *timeStr;
+    if (_dataArr.lastObject) {
+        if ([self compareTimeDate:msg.time date2:_dataArr.lastObject.msgModel.time]) {
+            timeStr = [self TimeDifferenceTransformation:msg.time];
+        }
+    }
+    ChatCellFrameModel *frameModel = [ChatCellFrameModel frameModelWith:msg timeStr:timeStr];
+    [_dataArr addObject:frameModel];
+    [_table reloadData];
 }
 
 @end

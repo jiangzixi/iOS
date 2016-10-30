@@ -3,12 +3,10 @@
 // Copyright (c) 2016 姜梓烯. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@class ChatCellFrameModel;
 
 @interface ChatTextCell : UITableViewCell
 
-
-
+@property(nonatomic, strong) ChatCellFrameModel *frameModel;
 
 @end

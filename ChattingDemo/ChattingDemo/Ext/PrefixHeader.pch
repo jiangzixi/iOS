@@ -15,8 +15,16 @@
 
 #import "UIView+ZXLayout.h"
 #import "NSObject+Ext.h"
+#import "NSDate+Ext.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+
+
+#define kMYCHATID @"666"
+#define kOTHERCHATID @"888"
+#define kMYAVATAR [UIImage imageNamed:@"myAvatar@2x.png"]
+#define kOTHERAVATAR [UIImage imageNamed:@"otherAvatar@2x.png"]
 
 
 //常用宏

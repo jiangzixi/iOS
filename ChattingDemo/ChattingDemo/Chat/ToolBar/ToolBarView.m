@@ -41,13 +41,15 @@
 
     _inputView = [[UITextView alloc] initWithFrame:CGRectMake(_voiceBtn.rightX + 5, 0, PHONEWIDTH - 84, 36)];
     _inputView.centerY = self.height / 2;
-    _inputView.font = [UIFont systemFontOfSize:15];
+    _inputView.font = [UIFont systemFontOfSize:16];
     _inputView.textColor = [UIColor blackColor];
     _inputView.delegate = self;
     _inputView.layer.cornerRadius = 5;
     _inputView.layer.borderColor = topLine.backgroundColor.CGColor;
     _inputView.layer.borderWidth = 1;
     _inputView.layer.masksToBounds = YES;
+    [_inputView setScrollsToTop:NO];
+
     [self addSubview:_inputView];
 
     _addBtn = [[UIButton alloc] initWithFrame:CGRectMake(PHONEWIDTH - 30 - 5, 0, 30, 30)];
@@ -105,21 +107,28 @@
     //处理输入框变化
     CGSize maxSize = CGSizeMake(textView.width, CGFLOAT_MAX);
     NSDictionary *attribute = @{NSFontAttributeName: textView.font};
-    CGSize retSize = [textView.text boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
-    if (textView.height + 18 != retSize.height || textView.height == 36 || textView.height == 100) {
-        CGFloat oldHeigh = self.height;
-        if (retSize.height <= 82) {
-            textView.height = retSize.height + 18;
-            self.height = textView.height + 16;
-        } else {
-            textView.height = 100;
-            self.height = 114;
-        }
-        textView.centerY = self.height / 2;
-        _voiceBtn.bottomY = self.height - 10;
-        _addBtn.y = _voiceBtn.y;
-        CGFloat change = oldHeigh-self.height;
-        self.y = self.y+change;
+    CGSize retSize = [textView sizeThatFits:CGSizeMake(textView.width,100)];
+    NSLog(@"%f-----%f",retSize.height,retSize.width);
+//    CGSize retSize = [textView.text boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    if (textView.height != retSize.height || textView.height == 36 || textView.height == 100) {
+        [UIView animateWithDuration:0.25 animations:^{
+            CGFloat oldHeigh = self.height;
+            if (retSize.height <= 100) {
+                textView.height = retSize.height;
+                self.height = textView.height + 16;
+            } else {
+                textView.height = 100;
+                self.height = 114;
+            }
+            textView.centerY = self.height / 2;
+            _voiceBtn.bottomY = self.height - 10;
+            _addBtn.y = _voiceBtn.y;
+            CGFloat change = oldHeigh-self.height;
+            self.y = self.y+change;
+            [textView setContentOffset:CGPointMake(0, retSize.height - textView.height) animated:YES];
+        } completion:^(BOOL finished) {
+
+        }];
     }
 }
 

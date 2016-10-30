@@ -4,7 +4,6 @@
 //
 
 #import "NSObject+Ext.h"
-#import <objc/runtime.h>
 
 @implementation NSObject (Ext)
 

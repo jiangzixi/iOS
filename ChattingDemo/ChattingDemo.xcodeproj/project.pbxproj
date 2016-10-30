@@ -17,7 +17,9 @@
 		6E94C1491DC496030037740C /* ChattingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94C1481DC496030037740C /* ChattingDemoUITests.m */; };
 		CC8760879B8D0B450E32E8EB /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87674CFD0D2ABDF7CD609C /* NSObject+Ext.m */; };
 		CC87608F7FF58474CC639DCD /* ToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876BA131E9156DC35E509F /* ToolBarView.m */; };
+		CC8761476E7EFB510E6EE437 /* message_sender_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC87629E7A0A8881532F9CBE /* message_sender_bg@2x.png */; };
 		CC8761C7912D8D0361638611 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8761A85DF57505EF811074 /* voice@2x.png */; };
+		CC87643EDA399B6F15CC7304 /* message_sender_bgHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC876C51B8693529AFB4950A /* message_sender_bgHL@2x.png */; };
 		CC87664F3CEA7695D2844DB2 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876A862CB4B784B81D2E57 /* NSDate+Ext.m */; };
 		CC876751988F302862EB0EB1 /* otherAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC876A2D1F74453D47632F7F /* otherAvatar@2x.png */; };
 		CC87679F553946A37F6E9BAB /* ChatCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8769A7FEC5495BF22F0DD0 /* ChatCellFrameModel.m */; };
@@ -26,7 +28,9 @@
 		CC876BAB6ED5549857E1C3DA /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC876917F91478A544E6706D /* ChatTextCell.m */; };
 		CC876C6149CE5E8BEB774ED8 /* myAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC876F5C13549CFACB66E24C /* myAvatar@2x.png */; };
 		CC876D281EA5F8A4B68086FE /* UITableViewCell+ZXExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8766F3781176039D7CDE0E /* UITableViewCell+ZXExt.m */; };
+		CC876DF2CFA8890E363C3D2A /* message_receiver_bgHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC87674AFA8499111B1E5608 /* message_receiver_bgHL@2x.png */; };
 		CC876DF75C3DEF6E5BDD3776 /* ChatMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8761E98DDD0199A750155F /* ChatMsgModel.m */; };
+		CC876E04EE9D277E73D1FF0D /* message_receiver_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC876130A7E8F524064F9637 /* message_receiver_bg@2x.png */; };
 		CC876EA5CE348632FD88630C /* UIView+ZXLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CC87605FE79CBEC5521E0168 /* UIView+ZXLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -65,13 +69,16 @@
 		6E94C1481DC496030037740C /* ChattingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChattingDemoUITests.m; sourceTree = "<group>"; };
 		6E94C14A1DC496030037740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC87605FE79CBEC5521E0168 /* UIView+ZXLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZXLayout.m"; sourceTree = "<group>"; };
+		CC876130A7E8F524064F9637 /* message_receiver_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_receiver_bg@2x.png"; sourceTree = "<group>"; };
 		CC8761A85DF57505EF811074 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
 		CC8761E98DDD0199A750155F /* ChatMsgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMsgModel.m; sourceTree = "<group>"; };
 		CC8761ED26C65E835AB384D9 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		CC87624FE87CE8B629BC6E7F /* ChatCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCellFrameModel.h; sourceTree = "<group>"; };
+		CC87629E7A0A8881532F9CBE /* message_sender_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_sender_bg@2x.png"; sourceTree = "<group>"; };
 		CC8765C5ED71156924C3174D /* UIView+ZXLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZXLayout.h"; sourceTree = "<group>"; };
 		CC876699904EA47426F4A091 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CC8766F3781176039D7CDE0E /* UITableViewCell+ZXExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ZXExt.m"; sourceTree = "<group>"; };
+		CC87674AFA8499111B1E5608 /* message_receiver_bgHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_receiver_bgHL@2x.png"; sourceTree = "<group>"; };
 		CC87674CFD0D2ABDF7CD609C /* NSObject+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
 		CC87689E5DA141B8DE0E7230 /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
 		CC876917F91478A544E6706D /* ChatTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextCell.m; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		CC876BA131E9156DC35E509F /* ToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBarView.m; sourceTree = "<group>"; };
 		CC876BFC1140963EB8E58C10 /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
 		CC876C1DED6B49CE2BC42DE4 /* ChatMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMsgModel.h; sourceTree = "<group>"; };
+		CC876C51B8693529AFB4950A /* message_sender_bgHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_sender_bgHL@2x.png"; sourceTree = "<group>"; };
 		CC876D17B129723A5F9D2088 /* ChatTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextCell.h; sourceTree = "<group>"; };
 		CC876E5094053016D747C68A /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
 		CC876F5C13549CFACB66E24C /* myAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myAvatar@2x.png"; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 				CC8761ED26C65E835AB384D9 /* add@2x.png */,
 				CC876A2D1F74453D47632F7F /* otherAvatar@2x.png */,
 				CC876F5C13549CFACB66E24C /* myAvatar@2x.png */,
+				CC876130A7E8F524064F9637 /* message_receiver_bg@2x.png */,
+				CC87674AFA8499111B1E5608 /* message_receiver_bgHL@2x.png */,
+				CC87629E7A0A8881532F9CBE /* message_sender_bg@2x.png */,
+				CC876C51B8693529AFB4950A /* message_sender_bgHL@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -360,6 +372,10 @@
 				CC876B9F836504D4176AC3EF /* add@2x.png in Resources */,
 				CC876751988F302862EB0EB1 /* otherAvatar@2x.png in Resources */,
 				CC876C6149CE5E8BEB774ED8 /* myAvatar@2x.png in Resources */,
+				CC876E04EE9D277E73D1FF0D /* message_receiver_bg@2x.png in Resources */,
+				CC876DF2CFA8890E363C3D2A /* message_receiver_bgHL@2x.png in Resources */,
+				CC8761476E7EFB510E6EE437 /* message_sender_bg@2x.png in Resources */,
+				CC87643EDA399B6F15CC7304 /* message_sender_bgHL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

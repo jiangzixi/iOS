@@ -8,7 +8,8 @@
 @interface ChatCellFrameModel : NSObject
 
 @property(nonatomic, assign) CGRect avatarFrame;
-@property(nonatomic, assign) CGRect msgFrame;
+@property(nonatomic, assign) CGRect msgImgFrame;
+@property(nonatomic, assign) CGRect msgLblFrame;
 @property(nonatomic, assign) CGRect timeFrame;
 
 @property(nonatomic, assign) CGFloat cellHeight;

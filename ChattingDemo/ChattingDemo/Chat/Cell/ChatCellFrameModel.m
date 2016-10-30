@@ -39,16 +39,18 @@
     } else {
         _timeFrame = CGRectZero;
     }
+    CGRect strRect = [msgModel.msgContent boundingRectWithSize:CGSizeMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-48, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil];//发送内容的Frame
     if ([msgModel.fromId isEqualToString:kMYCHATID]) {
         //自己发送的
-        _avatarFrame = CGRectMake(avatarMargin, _timeFrame.origin.y+_timeFrame.size.height + 13, avatarWidth, avatarWidth);
-
+        _avatarFrame = CGRectMake(PHONEWIDTH-avatarMargin-avatarWidth, _timeFrame.origin.y+_timeFrame.size.height + 13, avatarWidth, avatarWidth);
+        _msgImgFrame = CGRectMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-strRect.size.width+6,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+        _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
 
     } else {
         //对方发送的
-        _avatarFrame = CGRectMake(PHONEWIDTH-avatarMargin-avatarWidth,_timeFrame.origin.y+_timeFrame.size.height+13,avatarWidth,avatarWidth);
-
-
+        _avatarFrame = CGRectMake(avatarMargin,_timeFrame.origin.y+_timeFrame.size.height+13,avatarWidth,avatarWidth);
+        _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+        _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
     }
 
     _cellHeight = _avatarFrame.origin.y+_avatarFrame.size.height+10;

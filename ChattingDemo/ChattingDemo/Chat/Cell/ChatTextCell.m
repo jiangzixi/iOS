@@ -10,8 +10,9 @@
 
 @interface ChatTextCell()
 
-@property(nonatomic, strong) UIImageView *avatarImg;
-@property(nonatomic, strong) UIButton *msgBtn;
+@property(nonatomic, strong) UIButton *avatarBtn;
+@property(nonatomic, strong) UIImageView *msgImg;
+@property(nonatomic, strong) UILabel *textLbl;
 @property(nonatomic, strong) UILabel *timeLbl;
 
 @end
@@ -37,20 +38,36 @@
     _timeLbl.layer.cornerRadius = 5;
     _timeLbl.layer.masksToBounds = YES;
 
-    _avatarImg.layer.borderWidth = 0.5;
-    _avatarImg.layer.borderColor = RGBA(153,153,153,0.4).CGColor;
+    _avatarBtn.layer.borderWidth = 0.5;
+    _avatarBtn.layer.borderColor = RGBA(153,153,153,0.4).CGColor;
+
+    [_textLbl removeFromSuperview];
+    _textLbl.font = [UIFont systemFontOfSize:16];
+    _textLbl.numberOfLines = 0;
+    _textLbl.textColor = [UIColor blackColor];
+    [_msgImg addSubview:_textLbl];
 }
 
 - (void)setFrameModel:(ChatCellFrameModel *)frameModel {
     _frameModel = frameModel;
     _timeLbl.frame = frameModel.timeFrame;
     _timeLbl.text = frameModel.timeStr;
-    _avatarImg.frame = frameModel.avatarFrame;
+    _avatarBtn.frame = frameModel.avatarFrame;
+    _msgImg.frame = frameModel.msgImgFrame;
+    _textLbl.frame = frameModel.msgLblFrame;
+    _textLbl.text = frameModel.msgModel.msgContent;
     if ([frameModel.msgModel.fromId isEqualToString:kMYCHATID]) {
-        _avatarImg.image = kMYAVATAR;
+        [_avatarBtn setImage:kMYAVATAR forState:UIControlStateNormal];
+        UIImage *norImg = [UIImage imageNamed:@"message_sender_bg"];
+        _msgImg.image = [norImg resizableImageWithCapInsets:UIEdgeInsetsMake(15,15,15,30)];
+        UIImage *hlImg = [UIImage imageNamed:@"message_sender_bgHL"];
+        _msgImg.highlightedImage = [hlImg resizableImageWithCapInsets:UIEdgeInsetsMake(15,15,15,30)];
     } else {
-        _avatarImg.image = kOTHERAVATAR;
+        [_avatarBtn setImage:kOTHERAVATAR forState:UIControlStateNormal];
+        _msgImg.image = [[UIImage imageNamed:@"message_receiver_bg"] stretchableImageWithLeftCapWidth:20 topCapHeight:30];
+        _msgImg.highlightedImage = [[UIImage imageNamed:@"message_receiver_bgHL"] stretchableImageWithLeftCapWidth:20 topCapHeight:30];
     }
+//    [_msgImg layoutIfNeeded];
 }
 
 

@@ -66,11 +66,18 @@
     msg3.time = @"1451169923";
     msg3.toId = kMYCHATID;
     msg3.msgType = @"0";
-    msg3.msgContent = @"哈哈";
+    msg3.msgContent = @"谢谢";
     ChatCellFrameModel *frameModel3 = [ChatCellFrameModel frameModelWith:msg3 timeStr:[self TimeDifferenceTransformation:msg3.time]];
     [_dataArr addObject:frameModel3];
 
-
+    ChatMsgModel *msg4 = [[ChatMsgModel alloc] init];
+    msg4.fromId = kOTHERCHATID;
+    msg4.time = @"1451169935";
+    msg4.toId = kMYCHATID;
+    msg4.msgType = @"0";
+    msg4.msgContent = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
+    ChatCellFrameModel *frameModel4 = [ChatCellFrameModel frameModelWith:msg4 timeStr:nil];
+    [_dataArr addObject:frameModel4];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

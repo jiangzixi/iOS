@@ -9,12 +9,21 @@
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.h" isTestSource="false" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/sharemore_pic@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/TypeSelectorBtn_Black@3x.png" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/myAvatar@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/voice@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/add@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_receiver_bg@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_sender_bg@2x.png" isTestSource="false" />
+>>>>>>> origin/master
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_receiver_bgHL@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/sharemore_video@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewInputVoice@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_sender_bgHL@2x.png" isTestSource="false" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewEmotionHL@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewEmotionHL@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/myAvatar@2x.png" isTestSource="false" />
@@ -28,23 +37,32 @@
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewEmotion@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewInputVoice@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/sharemore_pic@2x.png" isTestSource="false" />
+=======
+>>>>>>> origin/master
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/otherAvatar@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/TypeSelectorBtn_Black@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/ToolViewInputVoiceHL@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.m" isTestSource="false" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/FunctionBtn.m" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.m" isTestSource="false" />
+>>>>>>> origin/master
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/FunctionBtn.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/MoreFunctionView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/MoreFunctionView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatCellFrameModel.h" isTestSource="false" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatImageCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatImageCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatCellFrameModel.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.m" isTestSource="false" />
+=======
+>>>>>>> origin/master
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.h" isTestSource="false" />

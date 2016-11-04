@@ -2,10 +2,10 @@
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/ChattingDemoTests.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemoUITests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemoUITests/ChattingDemoUITests.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/ChattingDemoTests.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemoTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.h" isTestSource="false" />
@@ -13,18 +13,18 @@
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/voice@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/add@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_receiver_bg@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_sender_bg@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_receiver_bgHL@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_sender_bgHL@2x.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/message_sender_bg@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Resource/otherAvatar@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ToolBar/ToolBarView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatTextCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatCellFrameModel.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Cell/ChatCellFrameModel.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/Msg/ChatMsgModel.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Chat/ChatVC.h" isTestSource="false" />
@@ -36,9 +36,9 @@
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/NSObject+Ext.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/UIView+ZXLayout.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/NSDate+Ext.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/PrefixHeader.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/UIView+ZXLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/UITableViewCell+ZXExt.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/PrefixHeader.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Ext/NSObject+Ext.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ChattingDemo/Base.lproj/Main.storyboard" isTestSource="false" />

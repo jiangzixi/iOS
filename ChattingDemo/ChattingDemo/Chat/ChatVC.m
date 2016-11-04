@@ -154,7 +154,7 @@
 
 - (void)scrollToBottomWithAnimation:(BOOL)animation {
     if (_table.contentSize.height>_table.height-64) {
-        [_table setContentOffset:CGPointMake(0,_table.contentSize.height-_table.height) animated:YES];
+        [_table setContentOffset:CGPointMake(0,_table.contentSize.height-_table.height) animated:animation];
     }
 }
 

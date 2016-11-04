@@ -5,9 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class MoreFunctionView;
+
 @protocol MoreFunctionDelegate <NSObject>
 
-
+- (void)moreFunctionSelectPicBtn:(UIButton *)button;
 
 @end
 

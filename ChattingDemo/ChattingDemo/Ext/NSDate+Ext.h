@@ -8,7 +8,7 @@
 @interface NSDate (Ext)
 + (NSString *)dateWithTimeInterval:(NSTimeInterval)interval format:(NSString *)formating;
 
-+ (BOOL)compareTimeDate:(NSString *)str date2:(NSString *)str2;
++ (BOOL)compareTimeDate:(NSString *)oldTime date2:(NSString *)newTime ;
 
 + (NSString *)TimeDifferenceTransformation:(NSString *)str;
 @end

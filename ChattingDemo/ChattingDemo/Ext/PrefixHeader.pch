@@ -36,6 +36,6 @@
 #define KEYWINDOW [UIApplication sharedApplication].keyWindow
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
-
+#define kCHATIMAGEFOLDERPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES).firstObject stringByAppendingPathComponent:@"ChatFolder"]
 
 #endif /* PrefixHeader_pch */

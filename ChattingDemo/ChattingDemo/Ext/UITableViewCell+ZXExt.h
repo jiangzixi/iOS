@@ -12,4 +12,5 @@
 
 - (void)initMyUI;
 
+- (void)initMyUI:(Class)className;
 @end

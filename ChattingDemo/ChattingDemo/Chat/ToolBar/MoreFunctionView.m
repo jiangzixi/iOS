@@ -23,6 +23,7 @@
 
     FunctionBtn *picBtn = [[FunctionBtn alloc] initWithFrame:CGRectMake((PHONEWIDTH-4*FunctionBtnWidth)/5,15,FunctionBtnWidth,72)];
     [picBtn setImage:[UIImage imageNamed:@"sharemore_pic"] HLImage:nil title:@"照片"];
+    [picBtn addTarget:_delegate action:@selector(moreFunctionSelectPicBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:picBtn];
 
     FunctionBtn *cameraBtn = [[FunctionBtn alloc] initWithFrame:CGRectMake(picBtn.rightX+25,picBtn.y,FunctionBtnWidth,72)];

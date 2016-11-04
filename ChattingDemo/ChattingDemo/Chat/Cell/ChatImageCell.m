@@ -8,12 +8,7 @@
 #import "ChatCellFrameModel.h"
 #import "ChatMsgModel.h"
 
-@interface ChatImageCell()
-
-@property(nonatomic, strong) UIButton *avatarBtn;
-@property(nonatomic, strong) UIImageView *msgImg;
-@property(nonatomic, strong) UIImageView *msgContentImg;
-@property(nonatomic, strong) UILabel *timeLbl;
+@interface ChatImageCell ()
 
 @end
 
@@ -31,55 +26,32 @@
     [self initMyUI];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    _timeLbl.font = [UIFont systemFontOfSize:11];
-    _timeLbl.textAlignment = NSTextAlignmentCenter;
-    _timeLbl.backgroundColor = RGBA(206,206,206,1);
-    _timeLbl.textColor = [UIColor whiteColor];
-    _timeLbl.layer.cornerRadius = 5;
-    _timeLbl.layer.masksToBounds = YES;
-
-    _avatarBtn.layer.borderWidth = 0.5;
-    _avatarBtn.layer.borderColor = RGBA(153,153,153,0.4).CGColor;
-
-    _msgContentImg = [[UIImageView alloc] init];
-    _msgContentImg.backgroundColor = [UIColor lightGrayColor];
-    _msgContentImg.contentMode = UIViewContentModeScaleAspectFill;
-    _msgContentImg.clipsToBounds = YES;
-    _msgContentImg.layer.masksToBounds = YES;
-    _msgContentImg.layer.cornerRadius = 5.0f;
-    [self.contentView addSubview:_msgContentImg];
-
 }
 
 - (void)setFrameModel:(ChatCellFrameModel *)frameModel {
-    _frameModel = frameModel;
-    _timeLbl.frame = frameModel.timeFrame;
-    _timeLbl.text = frameModel.timeStr;
-    _avatarBtn.frame = frameModel.avatarFrame;
-    _msgImg.frame = frameModel.msgImgFrame;
+    [super setFrameModel:frameModel];
+//    _msgContentImg.frame = frameModel.msgContentFrame;
     if ([frameModel.msgModel.fromId isEqualToString:kMYCHATID]) {
-        [_avatarBtn setImage:kMYAVATAR forState:UIControlStateNormal];
-        UIImage *norImg = [UIImage imageNamed:@"message_sender_bg"];
-        _msgImg.image = [norImg resizableImageWithCapInsets:UIEdgeInsetsMake(15,15,15,30)];
-        UIImage *hlImg = [UIImage imageNamed:@"message_sender_bgHL"];
-        _msgImg.highlightedImage = [hlImg resizableImageWithCapInsets:UIEdgeInsetsMake(15,15,15,30)];
+        //自己发的图片
+        NSError *error = nil;
+        NSData *imageData = [NSData dataWithContentsOfFile:[kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:frameModel.msgModel.msgContent] options:NSDataReadingMappedIfSafe error:&error];
+        if (!error) {
+            //找到图片
+            UIImageView *image = self.msgImg;
+            CAShapeLayer *layer = [CAShapeLayer layer];
+            layer.frame = self.msgImg.bounds;
+            layer.contents = (id)self.msgImg.image.CGImage;
+            layer.contentsCenter = CGRectMake(0.5, 0.5, 0.1, 0.1);
+            layer.contentsScale = [UIScreen mainScreen].scale;
+            image.layer.mask = layer;
+            image.layer.frame = image.frame;
+            image.image = [UIImage imageWithData:imageData];
+        } else {
+            //没找到图片
+        }
     } else {
-        [_avatarBtn setImage:kOTHERAVATAR forState:UIControlStateNormal];
-        _msgImg.image = [[UIImage imageNamed:@"message_receiver_bg"] stretchableImageWithLeftCapWidth:20 topCapHeight:30];
-        _msgImg.highlightedImage = [[UIImage imageNamed:@"message_receiver_bgHL"] stretchableImageWithLeftCapWidth:20 topCapHeight:30];
+
     }
-
-
-//    _msgContentImg.frame = self.frameModel.msgContentFrame;
-//    UIImageView *ImageView = [[UIImageView alloc] init];
-//    [ImageView setFrame:_msgContentImg.frame];
-//    UIImage *image = [UIImage imageNamed:[self.model.DBModel.whoSend isEqualToString:@"1"] ? @"SenderTextNodeBkg" : @"ReceiverTextNodeBkg"];
-//    [ImageView setImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height / 1.5, image.size.width / 1.5, image.size.height / 2 + 1, image.size.width / 2 + 1)]];
-//    CALayer *layer = ImageView.layer;
-//    layer.frame = (CGRect) {{0, 0}, ImageView.layer.frame.size};
-//    _msgContentImg.layer.mask = layer;
-//    [_msgContentImg setNeedsDisplay];
-//    [self.text setImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height / 1.5, image.size.width / 1.5, image.size.height / 2 + 1, image.size.width / 2 + 1)]];
 }
 
 

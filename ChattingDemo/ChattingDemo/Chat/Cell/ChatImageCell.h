@@ -3,11 +3,9 @@
 // Copyright (c) 2016 姜梓烯. All rights reserved.
 //
 
+#import "ChatBaseCell.h"
 
-@class ChatCellFrameModel;
+@interface ChatImageCell : ChatBaseCell
 
-@interface ChatImageCell : UITableViewCell
-
-@property(nonatomic, strong) ChatCellFrameModel *frameModel;
 
 @end

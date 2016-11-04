@@ -5,8 +5,8 @@
 
 @class ChatCellFrameModel;
 
-@interface ChatTextCell : UITableViewCell
+#import "ChatBaseCell.h"
 
-@property(nonatomic, strong) ChatCellFrameModel *frameModel;
+@interface ChatTextCell : ChatBaseCell
 
 @end

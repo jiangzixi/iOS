@@ -39,21 +39,68 @@
     } else {
         _timeFrame = CGRectZero;
     }
-    CGRect strRect = [msgModel.msgContent boundingRectWithSize:CGSizeMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-48, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil];//发送内容的Frame
     if ([msgModel.fromId isEqualToString:kMYCHATID]) {
-        //自己发送的
         _avatarFrame = CGRectMake(PHONEWIDTH-avatarMargin-avatarWidth, _timeFrame.origin.y+_timeFrame.size.height + 13, avatarWidth, avatarWidth);
-        _msgImgFrame = CGRectMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-strRect.size.width+6,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
-        _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
-
     } else {
-        //对方发送的
         _avatarFrame = CGRectMake(avatarMargin,_timeFrame.origin.y+_timeFrame.size.height+13,avatarWidth,avatarWidth);
-        _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
-        _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
+    }
+    if (msgModel.msgType==chatMsgTypeText) {
+        CGRect strRect = [msgModel.msgContent boundingRectWithSize:CGSizeMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-48, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil];//发送内容的Frame
+        if ([msgModel.fromId isEqualToString:kMYCHATID]) {
+            //自己发送的
+            _msgImgFrame = CGRectMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-strRect.size.width+6,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+            _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
+        } else {
+            //对方发送的
+            _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+            _msgLblFrame = CGRectMake(18,14,strRect.size.width,strRect.size.height);
+        }
+    } else if (msgModel.msgType==chatMsgTypeImage) {
+        if ([msgModel.fromId isEqualToString:kMYCHATID]) {
+            //自己发送的
+            NSError *error = nil;
+            NSData *imageData = [NSData dataWithContentsOfFile:[kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:msgModel.msgContent] options:NSDataReadingMappedIfSafe error:&error];
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:imageData];
+                CGSize size = [self imageSize:image];
+                NSLog(@"%@",NSStringFromCGSize(size));
+                _msgImgFrame = CGRectMake(PHONEWIDTH-avatarWidth-2*avatarMargin-size.width,_avatarFrame.origin.y-2,size.width,size.height);
+                _msgContentFrame = CGRectMake(0,0,_msgImgFrame.size.width,_msgImgFrame.size.height);
+            }
+//            _msgImgFrame = CGRectMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-strRect.size.width+6,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+
+        } else {
+            //对方发送的
+//            _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+
+        }
+
+
+
     }
 
-    _cellHeight = _msgImgFrame.origin.y+_msgImgFrame.size.height-5;
+
+    _cellHeight = _msgImgFrame.origin.y + _msgImgFrame.size.height + 6;
+}
+
+- (CGSize)imageSize:(UIImage *)image{
+    CGSize size = image.size;
+    CGSize newSize = CGSizeZero;
+    if (size.width>PHONEWIDTH/2) {
+        newSize.width = PHONEWIDTH/2;
+        newSize.height = size.height*newSize.width/size.width;
+    } else {
+        newSize = size;
+    }
+    size = newSize;
+    newSize = CGSizeZero;
+    if (size.height>PHONEHEIGHT/3) {
+        newSize.height = PHONEHEIGHT/3;
+        newSize.width = size.width*newSize.height/size.height;
+    } else {
+        newSize = size;
+    }
+    return newSize;
 }
 
 

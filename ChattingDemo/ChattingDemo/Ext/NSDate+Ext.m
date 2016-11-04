@@ -17,9 +17,9 @@
 }
 
 + (BOOL)compareTimeDate:(NSString *)str date2:(NSString *)str2 {
-    NSInteger oldTime = str.integerValue;
-    NSInteger newTime = str2.integerValue;
-    return (newTime-oldTime) / 120 > 1;
+    NSInteger old = str.integerValue;
+    NSInteger new = str2.integerValue;
+    return (old-new) / 120 > 1;
 }
 
 + (NSString *)TimeDifferenceTransformation:(NSString *)str {
@@ -33,7 +33,7 @@
     [dm setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
     NSDate *newdate = [dm dateFromString:datestring];
     long dd = [datenow timeIntervalSince1970] - str.longLongValue;
-    NSString *timeString = @"";
+    NSString *timeString;
     if (dd / 86400 > 1) {
         timeString = [NSDate dateWithTimeInterval:str.floatValue format:@"yyyy/MM/dd HH:mm"];
     } else {

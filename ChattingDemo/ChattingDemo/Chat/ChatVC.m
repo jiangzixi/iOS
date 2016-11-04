@@ -8,11 +8,13 @@
 #import "ChatTextCell.h"
 #import "ChatMsgModel.h"
 #import "ChatCellFrameModel.h"
+#import "MoreFunctionView.h"
 
-@interface ChatVC () <UITableViewDelegate, UITableViewDataSource, ToolBarViewDelegate>
+@interface ChatVC () <UITableViewDelegate, UITableViewDataSource, ToolBarViewDelegate, MoreFunctionDelegate>
 
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) ToolBarView *toolBarView;
+@property(nonatomic, strong) MoreFunctionView *functionView;
 @property(nonatomic, strong) NSMutableArray<ChatCellFrameModel *> *dataArr;
 
 @end
@@ -39,6 +41,9 @@
     _toolBarView.delegate = self;
     [self.view addSubview:_toolBarView];
 
+    _functionView = [[MoreFunctionView alloc] initWithFrame:CGRectMake(0,_toolBarView.bottomY,PHONEWIDTH,moreViewHeigh)];
+    _functionView.delegate = self;
+    [self.view addSubview:_functionView];
 
 }
 
@@ -50,7 +55,7 @@
     msg1.toId = kOTHERCHATID;
     msg1.msgType = @"0";
     msg1.msgContent = @"生日快乐！";
-    ChatCellFrameModel *frameModel1 = [ChatCellFrameModel frameModelWith:msg1 timeStr:[self TimeDifferenceTransformation:msg1.time]];
+    ChatCellFrameModel *frameModel1 = [ChatCellFrameModel frameModelWith:msg1 timeStr:[NSDate TimeDifferenceTransformation:msg1.time]];
     [_dataArr addObject:frameModel1];
 
     ChatMsgModel *msg2 = [[ChatMsgModel alloc] init];
@@ -68,7 +73,7 @@
     msg3.toId = kMYCHATID;
     msg3.msgType = @"0";
     msg3.msgContent = @"谢谢";
-    ChatCellFrameModel *frameModel3 = [ChatCellFrameModel frameModelWith:msg3 timeStr:[self TimeDifferenceTransformation:msg3.time]];
+    ChatCellFrameModel *frameModel3 = [ChatCellFrameModel frameModelWith:msg3 timeStr:[NSDate TimeDifferenceTransformation:msg3.time]];
     [_dataArr addObject:frameModel3];
 
     ChatMsgModel *msg4 = [[ChatMsgModel alloc] init];
@@ -121,46 +126,18 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)compareTimeDate:(NSString *)str date2:(NSString *)str2 {
-    NSString *datestring = [NSDate dateWithTimeInterval:str.floatValue format:@"YYYY/MM/dd HH:mm:ss"];
-    NSString *datestring2 = [NSDate dateWithTimeInterval:str2.floatValue format:@"YYYY/MM/dd HH:mm:ss"];
-    NSDateFormatter *dm = [[NSDateFormatter alloc] init];
-    [dm setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
-    NSDate *newdate = [dm dateFromString:datestring];
-    NSDate *newdate2 = [dm dateFromString:datestring2];
-    long dd = (long) [newdate timeIntervalSince1970] - [newdate2 timeIntervalSince1970];
-    return dd / 120 < 1;
-}
 
-- (NSString *)TimeDifferenceTransformation:(NSString *)str {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-    [formatter setTimeZone:timeZone];
-    NSDate *datenow = [NSDate date];
-    NSString *datestring = [NSDate dateWithTimeInterval:str.longLongValue format:@"yyyy/MM/dd HH:mm:ss"];
-    NSDateFormatter *dm = [[NSDateFormatter alloc] init];
-    [dm setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
-    NSDate *newdate = [dm dateFromString:datestring];
-    long dd = [datenow timeIntervalSince1970] - str.longLongValue;
-    NSString *timeString = @"";
-    if (dd / 86400 > 1) {
-        timeString = [NSDate dateWithTimeInterval:str.floatValue format:@"yyyy/MM/dd HH:mm"];
-    } else {
-        timeString = [NSDate dateWithTimeInterval:str.floatValue format:@"HH:mm"];
-    }
-    return timeString;
-}
 
 - (void)scrollToBottomWithAnimation:(BOOL)animation {
     if (_table.contentSize.height>_table.height-64) {
-        [_table setContentOffset:CGPointMake(0,_table.contentSize.height-_table.height) animated:YES];
+        [_table setContentOffset:CGPointMake(0,_table.contentSize.height-_table.height) animated:animation];
     }
 }
 
 - (void)toolBarDidChangeFrame:(CGRect)frame {
     if (_toolBarView.y != 0) {
         _table.height = _toolBarView.y;
+        _functionView.y = _toolBarView.bottomY;
         [self scrollToBottomWithAnimation:YES];
     }
 }
@@ -174,8 +151,8 @@
     msg.msgContent = string;
     NSString *timeStr;
     if (_dataArr.lastObject) {
-        if ([self compareTimeDate:msg.time date2:_dataArr.lastObject.msgModel.time]) {
-            timeStr = [self TimeDifferenceTransformation:msg.time];
+        if ([NSDate compareTimeDate:msg.time date2:_dataArr.lastObject.msgModel.time]) {
+            timeStr = [NSDate TimeDifferenceTransformation:msg.time];
         }
     }
     ChatCellFrameModel *frameModel = [ChatCellFrameModel frameModelWith:msg timeStr:timeStr];

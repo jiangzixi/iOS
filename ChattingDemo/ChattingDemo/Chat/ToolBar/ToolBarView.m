@@ -35,7 +35,8 @@
 
     _voiceBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 30, 30)];
     _voiceBtn.centerY = self.height / 2;
-    [_voiceBtn setImage:[UIImage imageNamed:@"voice"] forState:UIControlStateNormal];
+    [_voiceBtn setImage:[UIImage imageNamed:@"ToolViewInputVoice"] forState:UIControlStateNormal];
+    [_voiceBtn setImage:[UIImage imageNamed:@"ToolViewInputVoiceHL"] forState:UIControlStateHighlighted];
     [_voiceBtn addTarget:self action:@selector(changeToVoiceBtn) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_voiceBtn];
 
@@ -55,7 +56,8 @@
 
     _addBtn = [[UIButton alloc] initWithFrame:CGRectMake(PHONEWIDTH - 30 - 5, 0, 30, 30)];
     _addBtn.centerY = self.height / 2;
-    [_addBtn setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
+    [_addBtn setImage:[UIImage imageNamed:@"TypeSelectorBtn_Black"] forState:UIControlStateNormal];
+    [_addBtn setImage:[UIImage imageNamed:@"TypeSelectorBtnHL_Black"] forState:UIControlStateHighlighted];
     [_addBtn addTarget:self action:@selector(moreBtn) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_addBtn];
 

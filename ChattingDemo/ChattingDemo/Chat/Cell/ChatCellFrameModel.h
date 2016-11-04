@@ -9,6 +9,7 @@
 
 @property(nonatomic, assign) CGRect avatarFrame;
 @property(nonatomic, assign) CGRect msgImgFrame;
+@property(nonatomic, assign) CGRect msgContentFrame;
 @property(nonatomic, assign) CGRect msgLblFrame;
 @property(nonatomic, assign) CGRect timeFrame;
 

@@ -96,7 +96,7 @@
 //    msg5.msgContent = @"6661478278059.png";
 //    ChatCellFrameModel *frameModel5 = [ChatCellFrameModel frameModelWith:msg5 timeStr:[self handleTimeStr:msg5]];
 //    [_dataArr addObject:frameModel5];
-//
+
 //    ChatMsgModel *msg6 = [[ChatMsgModel alloc] init];
 //    msg6.fromId = kMYCHATID;
 //    msg6.time = @"145117321";
@@ -105,6 +105,17 @@
 //    msg6.msgContent = @"6661478283051.png";
 //    ChatCellFrameModel *frameModel6 = [ChatCellFrameModel frameModelWith:msg6 timeStr:[self handleTimeStr:msg6]];
 //    [_dataArr addObject:frameModel6];
+
+    ChatMsgModel *msg7 = [[ChatMsgModel alloc] init];
+    msg7.fromId = kOTHERCHATID;
+    msg7.time = @"145117321";
+    msg7.toId = kMYCHATID;
+    msg7.msgType = chatMsgTypeImage;
+    msg7.msgContent = @"https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
+    ChatCellFrameModel *frameModel7 = [ChatCellFrameModel frameModelWith:msg7 timeStr:[self handleTimeStr:msg7]];
+    [_dataArr addObject:frameModel7];
+
+
 //
 //
 //    [_dataArr addObject:frameModel5];
@@ -135,10 +146,10 @@
         return textCell;
     } else if (frameModel.msgModel.msgType == chatMsgTypeImage) {
         ChatImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imageCell"];
+        imageCell.table = tableView;
         imageCell.frameModel = frameModel;
         return imageCell;
     }
-
     return UITableViewCell.new;
 }
 

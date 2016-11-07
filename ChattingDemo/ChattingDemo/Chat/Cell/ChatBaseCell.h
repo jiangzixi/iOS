@@ -13,9 +13,9 @@
 @property(nonatomic, strong) UIButton *avatarBtn;
 @property(nonatomic, strong) UIImageView *msgImg;
 @property(nonatomic, strong) UILabel *timeLbl;
+@property(nonatomic, weak) UITableView *table;
 
-
-@property(nonatomic, strong) ChatCellFrameModel *frameModel;
+@property(nonatomic, weak) ChatCellFrameModel *frameModel;
 
 
 @end

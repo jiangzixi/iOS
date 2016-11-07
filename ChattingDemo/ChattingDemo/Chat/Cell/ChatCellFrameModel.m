@@ -5,6 +5,7 @@
 
 #import "ChatCellFrameModel.h"
 #import "ChatMsgModel.h"
+#import "SDImageCache.h"
 
 #define avatarMargin 10 //边距
 #define timeTopMargin 20
@@ -65,21 +66,37 @@
                 CGSize size = [self imageSize:image];
                 NSLog(@"%@",NSStringFromCGSize(size));
                 _msgImgFrame = CGRectMake(PHONEWIDTH-avatarWidth-2*avatarMargin-size.width,_avatarFrame.origin.y-2,size.width,size.height);
-                _msgContentFrame = CGRectMake(0,0,_msgImgFrame.size.width,_msgImgFrame.size.height);
+//                _msgContentFrame = CGRectMake(0,0,_msgImgFrame.size.width,_msgImgFrame.size.height);
+            } else {
+                _msgImgFrame = CGRectMake(PHONEWIDTH-avatarWidth-2*avatarMargin-50,_avatarFrame.origin.y-2,50,50);
+//                _msgContentFrame = CGRectMake(0,0,_msgImgFrame.size.width,_msgImgFrame.size.height);
             }
 //            _msgImgFrame = CGRectMake(PHONEWIDTH-2*avatarWidth-2*avatarMargin-strRect.size.width+6,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
 
         } else {
             //对方发送的
 //            _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,strRect.size.width+36,strRect.size.height+36);
+            //自己发送的
+//            NSError *error = nil;
+//            NSData *imageData = [NSData dataWithContentsOfFile:[kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:msgModel.msgContent] options:NSDataReadingMappedIfSafe error:&error];
+//            if (!error) {
+//                UIImage *image = [UIImage imageWithData:imageData];
+//                CGSize size = [self imageSize:image];
+//                NSLog(@"%@",NSStringFromCGSize(size));
+//                _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,size.width,size.height);
+//            } else {
+//                _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y-2,50,50);
+//            }
 
+            UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:self.msgModel.msgContent];
+            if (image) {
+                CGSize size = [self imageSize:image];
+                _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y,size.width,size.height);
+            } else {
+                _msgImgFrame = CGRectMake(_avatarFrame.origin.x+_avatarFrame.size.width+5,_avatarFrame.origin.y,50,50);
+            }
         }
-
-
-
     }
-
-
     _cellHeight = _msgImgFrame.origin.y + _msgImgFrame.size.height + 6;
 }
 

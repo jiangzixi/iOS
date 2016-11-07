@@ -11,7 +11,6 @@
 
 @interface ChatBaseCell()
 
-
 @end
 
 @implementation ChatBaseCell

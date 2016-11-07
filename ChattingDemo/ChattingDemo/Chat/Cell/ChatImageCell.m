@@ -7,6 +7,8 @@
 #import "UITableViewCell+ZXExt.h"
 #import "ChatCellFrameModel.h"
 #import "ChatMsgModel.h"
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
 
 @interface ChatImageCell ()
 
@@ -30,28 +32,52 @@
 
 - (void)setFrameModel:(ChatCellFrameModel *)frameModel {
     [super setFrameModel:frameModel];
-//    _msgContentImg.frame = frameModel.msgContentFrame;
-    if ([frameModel.msgModel.fromId isEqualToString:kMYCHATID]) {
-        //自己发的图片
-        NSError *error = nil;
-        NSData *imageData = [NSData dataWithContentsOfFile:[kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:frameModel.msgModel.msgContent] options:NSDataReadingMappedIfSafe error:&error];
-        if (!error) {
-            //找到图片
-            UIImageView *image = self.msgImg;
+//    if ([frameModel.msgModel.fromId isEqualToString:kMYCHATID]) {
+//        //自己发的图片
+    NSError *error = nil;
+    NSData *imageData = [NSData dataWithContentsOfFile:[kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:frameModel.msgModel.msgContent] options:NSDataReadingMappedIfSafe error:&error];
+    if (!error) {
+        //找到图片
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        layer.frame = self.msgImg.bounds;
+        layer.contents = (id) self.msgImg.image.CGImage;
+        layer.contentsCenter = CGRectMake(0.5, 0.5, 0.1, 0.1);
+        layer.contentsScale = [UIScreen mainScreen].scale;
+        self.msgImg.layer.mask = layer;
+        self.msgImg.layer.frame = self.msgImg.frame;
+        self.msgImg.image = [UIImage imageWithData:imageData];
+    } else if (frameModel.msgModel.msgContent.length > 4 && [frameModel.msgModel.msgContent hasPrefix:@"http"]) {
+        //没找到图片
+        UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:frameModel.msgModel.msgContent];
+        if (image) {
             CAShapeLayer *layer = [CAShapeLayer layer];
             layer.frame = self.msgImg.bounds;
-            layer.contents = (id)self.msgImg.image.CGImage;
+            layer.contents = (id) self.msgImg.image.CGImage;
             layer.contentsCenter = CGRectMake(0.5, 0.5, 0.1, 0.1);
             layer.contentsScale = [UIScreen mainScreen].scale;
-            image.layer.mask = layer;
-            image.layer.frame = image.frame;
-            image.image = [UIImage imageWithData:imageData];
+            self.msgImg.layer.mask = layer;
+            self.msgImg.layer.frame = self.msgImg.frame;
+            self.msgImg.image = image;
         } else {
-            //没找到图片
+            WS(ws)
+            [self.msgImg sd_setImageWithURL:[NSURL URLWithString:frameModel.msgModel.msgContent] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                if ((cacheType == 0 && error == nil) || (cacheType == SDImageCacheTypeDisk && error == nil)) {
+                    ChatCellFrameModel *newFrameModel = [ChatCellFrameModel frameModelWith:frameModel.msgModel timeStr:frameModel.timeStr];
+                    [self setFrameModel:newFrameModel];
+                    [self.table reloadData];
+                }
+            }];
         }
-    } else {
 
+//            [[UIImageView new] sd_setImageWithURL:[NSURL URLWithString:frameModel.msgModel.msgContent] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                NSString *imagePath = [kCHATIMAGEFOLDERPATH stringByAppendingPathComponent:frameModel.msgModel.msgContent];
+//                NSData *data = UIImagePNGRepresentation(image);
+//                [data writeToFile:imagePath options:NSDataWritingWithoutOverwriting error:&error];
+//                ChatCellFrameModel *newFrameModel = [ChatCellFrameModel frameModelWith:frameModel.msgModel timeStr:frameModel.timeStr];
+//                self.frameModel = newFrameModel;
+//            }];
     }
+//    }
 }
 
 

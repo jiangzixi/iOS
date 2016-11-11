@@ -4,8 +4,10 @@
 //
 
 
+@class ChatCellFrameModel;
+
 @interface ChatVC : UIViewController
 
-
+@property(nonatomic, strong) NSMutableArray<ChatCellFrameModel *> *dataArr;
 
 @end

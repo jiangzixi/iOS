@@ -11,12 +11,11 @@
 #import "MoreFunctionView.h"
 #import "ChatImageCell.h"
 
-@interface ChatVC () <UITableViewDelegate, UITableViewDataSource, ToolBarViewDelegate, MoreFunctionDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ChatVC () <UITableViewDelegate, UITableViewDataSource, ToolBarViewDelegate, MoreFunctionDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, ChatImageCellDelegate>
 
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) ToolBarView *toolBarView;
 @property(nonatomic, strong) MoreFunctionView *functionView;
-@property(nonatomic, strong) NSMutableArray<ChatCellFrameModel *> *dataArr;
 
 @end
 
@@ -47,11 +46,12 @@
     _functionView.delegate = self;
     [self.view addSubview:_functionView];
 
-
+    [self scrollToBottomWithAnimation:YES];
 }
 
 - (void)initChatData {
     _dataArr = [NSMutableArray array];
+    NSLog(@"%@",_dataArr);
 
     ChatMsgModel *msg3 = [[ChatMsgModel alloc] init];
     msg3.fromId = kOTHERCHATID;
@@ -76,7 +76,7 @@
     msg1.time = @"1551145600";
     msg1.toId = kOTHERCHATID;
     msg1.msgType = chatMsgTypeText;
-    msg1.msgContent = @"生日快乐！";
+    msg1.msgContent = @"快乐！";
     ChatCellFrameModel *frameModel1 = [ChatCellFrameModel frameModelWith:msg1 timeStr:[self handleTimeStr:msg1]];
     [_dataArr addObject:frameModel1];
 
@@ -146,7 +146,7 @@
         return textCell;
     } else if (frameModel.msgModel.msgType == chatMsgTypeImage) {
         ChatImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"imageCell"];
-        imageCell.table = tableView;
+        imageCell.delegate = self;
         imageCell.frameModel = frameModel;
         return imageCell;
     }
@@ -255,6 +255,17 @@
     [picker dismissViewControllerAnimated:YES completion:^{
 
     }];
+}
+
+- (void)chatImageCellReplaceOldFrame:(ChatCellFrameModel *)oldFrameModel toNewModel:(ChatCellFrameModel *)newModel {
+    if ([_dataArr containsObject:oldFrameModel]) {
+        NSInteger index = [_dataArr indexOfObject:oldFrameModel];
+        [_dataArr replaceObjectAtIndex:index withObject:newModel];
+        if (_dataArr.count>index) {
+            [_table reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self scrollToBottomWithAnimation:YES];
+        }
+    }
 }
 
 @end

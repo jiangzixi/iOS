@@ -5,7 +5,14 @@
 
 #import "ChatBaseCell.h"
 
+@protocol ChatImageCellDelegate <NSObject>
+
+- (void)chatImageCellReplaceOldFrame:(ChatCellFrameModel *)oldFrameModel toNewModel:(ChatCellFrameModel *)newModel;
+
+@end
+
 @interface ChatImageCell : ChatBaseCell
 
+@property(nonatomic, weak) id<ChatImageCellDelegate>delegate;
 
 @end

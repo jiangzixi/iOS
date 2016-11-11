@@ -63,8 +63,7 @@
             [self.msgImg sd_setImageWithURL:[NSURL URLWithString:frameModel.msgModel.msgContent] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 if ((cacheType == 0 && error == nil) || (cacheType == SDImageCacheTypeDisk && error == nil)) {
                     ChatCellFrameModel *newFrameModel = [ChatCellFrameModel frameModelWith:frameModel.msgModel timeStr:frameModel.timeStr];
-                    [self setFrameModel:newFrameModel];
-                    [self.table reloadData];
+                    [_delegate chatImageCellReplaceOldFrame:frameModel toNewModel:newFrameModel];
                 }
             }];
         }
